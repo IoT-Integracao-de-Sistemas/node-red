@@ -2,10 +2,10 @@
 
 ### listar recursos
 
- 1.  Criar os endpoints de requisição e reposta 
- 2.  Adicionar os nós function e template
+ 1.  Criar os endpoints de requisição e resposta 
+ 2.  Adicionar os nós **function** e **template**
  
- 4.  Configurar o template conforme o conteúdo disponível em:
+ 4.  Configurar o nó **template** conforme o conteúdo disponível em:
 https://raw.githubusercontent.com/jeffersonchaves/node-red/main/template-table.html
 
  4. Crie e popule o banco de dados MySql confome:
