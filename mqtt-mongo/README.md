@@ -3,7 +3,10 @@
 1 - No console, digite os seguintes comandos
 
 > mongo
+
 > use iot
+
+
 > db.createUser({ user: 'nodered', pwd: '123456', roles: ['readWrite']})
 
 2 - Instale o pallet **node-red-mongodb**
