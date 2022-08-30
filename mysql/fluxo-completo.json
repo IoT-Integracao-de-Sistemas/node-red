@@ -1,0 +1,21 @@
+[
+    {
+        "id": "a996e1b6a20126c9",
+        "type": "function",
+        "z": "93dcd5dae85fd8f0",
+        "name": "database query",
+        "func": "msg.topic = \"SELECT * FROM tb_data\"\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "755418061dadb681"
+            ]
+        ]
+    }
+]
