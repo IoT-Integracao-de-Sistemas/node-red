@@ -13,7 +13,10 @@
 ### comandos uteis:
 
 #listar coleções: show collections
+
 #listar documentos: db.getCollection("{{sua_colecao}}").find({})
+
 #deletar coleções: db.{{sua_colecao}}.drop()
+
 #deletar usuário: db.dropUser("{{usuario}}")
 
