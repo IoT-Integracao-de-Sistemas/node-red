@@ -1,0 +1,143 @@
+[
+    {
+        "id": "2b1794b9eba46624",
+        "type": "tab",
+        "label": "Mqtt and Mong",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "265ae61db5c48647",
+        "type": "mqtt in",
+        "z": "2b1794b9eba46624",
+        "name": "",
+        "topic": "ifpr/sala/temperatura",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b1aa46006c06226b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 90,
+        "wires": [
+            [
+                "36ab5b2461451dbe",
+                "a46e6ff23e2c7b50"
+            ]
+        ]
+    },
+    {
+        "id": "a46e6ff23e2c7b50",
+        "type": "debug",
+        "z": "2b1794b9eba46624",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 90,
+        "wires": []
+    },
+    {
+        "id": "36ab5b2461451dbe",
+        "type": "mongodb out",
+        "z": "2b1794b9eba46624",
+        "mongodb": "98366184a49d21ac",
+        "name": "",
+        "collection": "iot_collection",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 590,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ddc9206d36938607",
+        "type": "http in",
+        "z": "2b1794b9eba46624",
+        "name": "",
+        "url": "/app/mongo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 300,
+        "wires": [
+            [
+                "e30fa08c2b8dd45b"
+            ]
+        ]
+    },
+    {
+        "id": "e30fa08c2b8dd45b",
+        "type": "mongodb in",
+        "z": "2b1794b9eba46624",
+        "mongodb": "98366184a49d21ac",
+        "name": "",
+        "collection": "iot_collection",
+        "operation": "find",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "e7090108ccd3b038"
+            ]
+        ]
+    },
+    {
+        "id": "e7090108ccd3b038",
+        "type": "http response",
+        "z": "2b1794b9eba46624",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 760,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b1aa46006c06226b",
+        "type": "mqtt-broker",
+        "name": "Mqttx Broker",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "2",
+        "birthRetain": "true",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "98366184a49d21ac",
+        "type": "mongodb",
+        "hostname": "127.0.0.1",
+        "port": "27017",
+        "db": "iot",
+        "name": "Localhost"
+    }
+]
