@@ -6,7 +6,6 @@
 
 https://raw.githubusercontent.com/jeffersonchaves/node-red/main/template-table.html
 
-
 4 - Crie e popule o banco de dados MySql
 
 https://github.com/jeffersonchaves/node-red/blob/main/mysql-database.sql
@@ -14,6 +13,8 @@ https://github.com/jeffersonchaves/node-red/blob/main/mysql-database.sql
 5 - Instale o Pallet node-red-node-mysql e faça sua configuração
 
 6 - Adicione um nó function e faça uma consulta:
+
+
 
 
 ## Extras
